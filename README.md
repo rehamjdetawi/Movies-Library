@@ -14,3 +14,7 @@
 
 ## Project Features
 <!-- What are the features included in you app -->
+answer questions:
+what have i oserved ?  i have observed some defuclties in creating an handleError Function 
+how it take from me to complete the task ? it took from me 4 hours 
+how time i think it would take from me ? it think it would take 5 hours
