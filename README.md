@@ -5,6 +5,8 @@
 **Author Name**: Reham jdetawe
 
 ## WRRC
+new WRRC ![2022-01-31 (10)](https://user-images.githubusercontent.com/97644233/151849417-20417dff-12af-45f0-b64f-da4c984ceb0b.png)
+
 ![2022-01-30 (4)](https://user-images.githubusercontent.com/97644233/151716272-0d09864a-da35-4c7a-825b-43548528099e.png)
 
 ## Overview
@@ -13,8 +15,9 @@
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 
 ## Project Features
+add trending movie and search for name of movie
 <!-- What are the features included in you app -->
 answer questions:
-what have i oserved ?  i have observed some defuclties in creating an handleError Function 
-how it take from me to complete the task ? it took from me 4 hours 
+what have i oserved ?  i have observed some defuclties in searching Function 
+how it take from me to complete the task ? it took from me 6 hours 
 how time i think it would take from me ? it think it would take 5 hours
