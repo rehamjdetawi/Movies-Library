@@ -2,13 +2,11 @@
 
 const express=require('express');
 const cors=require('cors');
-const data =require(`./data.json`)
+const data =require(`./ Movie Data/data.json`)
 
 const server=express();
 server.use(cors());
-server.get('*',handelNotFound);
-function handelNotFound(req,res){
-    return res.status(404).send('This page does not exist :/ ')}
+
 
 function Movie(title,poster_path,overview){
     this.title=title;
@@ -16,7 +14,7 @@ function Movie(title,poster_path,overview){
     this.overview=overview;
 }
 
-server.get('/homepage',handel);
+server.get('/',handel);
 function handel(req,res){
     
         let obj=new Movie(data.title,data.poster_path,data.overview);
@@ -37,7 +35,9 @@ function handelerror(req,res){
     return res.status(500).send(ob);
 }
 
-
+server.get('*',handelNotFound);
+function handelNotFound(req,res){
+    return res.status(404).send('This page does not exist :/ ')}
 
 
 server.listen(3000,()=>{
