@@ -26,6 +26,47 @@ function Movie(id,title,poster_path,release_date,overview){
     this.overview=overview;
 }
 
+server.put('/Update/:id',updatehandel);
+function updatehandel(req,res){
+    const id=req.params.id;
+    const movie=req.body;
+    const sql=`UPDATE favMovie SET title=$1,poster_path=$2,overview=$3,release_date=$4 WHERE id=$7 RETURNING *;`;
+    let values=[movie.title,movie.poster_path,movie.overview,movie.release_date,id]
+client.query(sql,values).then(data=>{
+    res.status(200).json(data.rows);
+}).catch((err)=>{
+    handelerror(err,req,res);
+});
+
+}
+server.delete('/delete/:id',deletehandel);
+
+function deletehandel(req,res){
+    const id=req.params.id;
+const sql=`DELETE FROM favMovie WHERE id=${id}; `
+client.query(sql).then(()=>{
+    res.status(200).send("the movie has been deleted")
+}).catch((err)=>{
+    handelerror(err,req,res);
+});
+
+
+}
+server.get('/getOnemovie/:id',getOnemoviehandler)
+
+function getOnemoviehandler(req,res){
+    let sql = `SELECT * FROM favMovie WHERE id=${req.params.id};`;
+    client.query(sql).then(data=>{
+       res.status(200).json(data.rows);
+    }).catch(error=>{
+        handelerror(error,req,res)
+    });
+    
+}
+
+
+
+
 server.get('/',handel);
 function handel(req,res){
     

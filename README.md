@@ -17,6 +17,7 @@ new WRRC ![2022-01-31 (10)](https://user-images.githubusercontent.com/97644233/1
 ## Project Features
 add trending movie and search for name of movie
 crreate database and add table to it.
+I added 3 endpoints update ,delete ,and get specific movie .
 <!-- What are the features included in you app -->
 answer questions:
 what have i oserved ?  i have observed some defuclties in searching Function 
